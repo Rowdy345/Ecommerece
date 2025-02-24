@@ -16,6 +16,8 @@ const Signup = ({ navigation }) => {
     const { setUser } = useContext(UserContext);
     const [modalVisible, setModalVisible] = useState(false);
 
+    
+
     const onSignIn = () => {
         navigation.navigate('Signin');
     };

@@ -57,7 +57,7 @@ const ProductDetails = ({ route, navigation }) => {
 
             <View style={styles.footer}>
                 <Pressable onPress={onAddCart} style={styles.bookmarkContainer}>
-                    <Image style={styles.bookmarkIcon} source={product?.liked ? require('../../../assets/bookmark_filled.png') : require('../../../assets/bookmark_blue.png')} />
+                    <Image style={styles.bookmarkIcon} source={product?.liked ? require('../../../assets/cartiocn.png') : require('../../../assets/bookmark_blue.png')} />
                 </Pressable>
                 <Button onPress={onContact} title='Contact Seller' />
             </View>
