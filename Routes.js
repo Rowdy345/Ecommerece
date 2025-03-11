@@ -29,6 +29,7 @@ const ProfileStack = () => {
             <Stack.Screen name='Settings' component={Settings} options={{ headerShown: false }} />
             <Stack.Screen name='CreateListing' component={CreateListing} options={{ headerShown: false }} />
             <Stack.Screen name='MyListings' component={MyListings} options={{ headerShown: false }} />
+            <Stack.Screen name='Signin' component={Signin} options={{ headerShown: false }} />
         </Stack.Navigator>
     );
 };

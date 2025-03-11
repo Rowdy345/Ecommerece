@@ -21,7 +21,7 @@ const Profile = ({ navigation }) => {
     }, []);
 
     const onLogout = () => {
-        console.log('log out clicked');
+        navigation.navigate('Signin');
     };
 
     const onSettingsPress = () => {

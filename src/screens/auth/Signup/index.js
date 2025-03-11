@@ -32,7 +32,7 @@ const Signup = ({ navigation }) => {
 
     const onSubmit = async () => {
         try {
-            if (!values?.fullName || !values?.email || !values?.password || !values?.confirmPassword) {
+            if (!values?.firstname || !values?.email || !values?.password || !values?.confirmPassword) {
                 Alert.alert('All fields are required');
                 return;
             }
@@ -70,7 +70,24 @@ const Signup = ({ navigation }) => {
             const token = await signup(userData);
             setUser({ token });
 
+           // Alert.alert('Sign Up is Successful, Please click on OK to Login');
+
+
+            Alert.alert(
+                  "Alert!",
+                  "Sign Up is Successful, Please click on Login",
+                  [
+                    { text: "Login", onPress: () => handleOkPress() }
+                  ]
+                );
+              const handleOkPress = () => {
+              navigation.navigate('Signin')
+              };
+
             console.log('token :>> ', token);
+
+
+
         } catch (error) {
             console.log('error :>> ', error);
         }
@@ -94,7 +111,6 @@ const Signup = ({ navigation }) => {
                 <TouchableOpacity onPress={() => setModalVisible(true)} style={styles.pickerButton}>
                     <Text>{values.country ? values.country : 'Select Country'}</Text>
                 </TouchableOpacity>
-                
                 <Modal visible={modalVisible} transparent={true} animationType="slide">
                     <View style={styles.modalOverlay}>
                         <View style={styles.pickerContainer}>

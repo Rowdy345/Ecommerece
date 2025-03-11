@@ -23,7 +23,7 @@ const ProductDetails = ({ route, navigation }) => {
         Linking.openURL(`tel:${phone}`);
 
         // Send an Email
-        const email = 'spawan123magic@mail.com';
+        const email = 'pawan123magic@mail.com';
         Linking.openURL(`mailto:${email}`);
     };
 

@@ -11,7 +11,6 @@ export const login = async (values) => {
 
         if (response?.data?.token) {
             await AsyncStorage.setItem('auth_token', response?.data?.token);
-
             return response?.data?.token;
         }
     } catch (e) {

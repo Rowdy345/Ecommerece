@@ -57,6 +57,7 @@ const Settings = ({ navigation }) => {
             setUser({ ...userData });
             setEditing(false);
             Alert.alert('Profile updated successfully!');
+            return;
         } catch (error) {
             console.log('error :>> ', error);
         }
@@ -75,26 +76,6 @@ const Settings = ({ navigation }) => {
     };
 
     return (
-        // <SafeAreaView>
-        //     <Header showBack onBackPress={goBack} title='Settings' />
-        //     <ScrollView style={styles.container}>
-        //         <View style={styles.sectionHeader}>
-        //             <Text style={styles.sectionTitle}>Personal Information</Text>
-        //             <Pressable onPress={onEditPress}>
-        //                 <Image style={styles.icon} source={require('../../../assets/edit.png')} />
-        //             </Pressable>
-        //         </View>
-        //         <EditableBox label='Name' onChangeText={v => onChange('name', v)} value={profile?.name?.firstname+" "+profile?.name?.lastname} editable={editing} />
-        //         <EditableBox label='Email' onChangeText={v => onChange('email', v)} value={values.email} editable={editing} />
-        //         {editing ? (
-        //             <Button style={styles.button} onPress={onSave} title='Save' />
-        //         ) : null}
-
-        //         <Text style={[styles.sectionTitle, { marginTop: 40 }]}></Text>
-              
-        //     </ScrollView>
-        // </SafeAreaView>
-
         <SafeAreaView>
        <Header showBack onBackPress={goBack} title='Settings' />
         <ScrollView contentContainerStyle={styles.scrollContainer}>
